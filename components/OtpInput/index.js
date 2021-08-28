@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "../../styles/OtpInput.module.css";
 
-const OtpInput = ({setOtpHandler}) =>{
+const OtpInput = ({setOtpHandler, otpInput}) =>{
 
-    const [localOtpState,setLocalOtpState] = useState(["#","#","#","#"]);
+    const [localOtpState,setLocalOtpState] = useState(otpInput.split(""));
 
     const otpChangeHandler = (event) => {
         let currentVal = event.target.value;
@@ -14,6 +14,10 @@ const OtpInput = ({setOtpHandler}) =>{
                 if(!tempVal.join("").includes("#")){
                     setOtpHandler(tempVal.join(""));
                 }
+                if(currentVal.length === 1 && currentIndex < 3){
+                    document.getElementById(`otpInput${Number(currentIndex)+1}`).focus()
+                }
+
                 return tempVal;
             })
     }
@@ -23,7 +27,7 @@ const OtpInput = ({setOtpHandler}) =>{
             <div className={styles.otpContainer}>
                 {localOtpState.map((val,index) => {
                     return (
-                        <input key={`otpInput${index}`} maxLength={1} data-index-number={index} onChange={(event) => otpChangeHandler(event)} autoComplete="off"/>
+                        <input key={`otpInput${index}`} id={`otpInput${index}`} maxLength={1} data-index-number={index} onChange={(event) => otpChangeHandler(event)} autoComplete="off"/>
                     )
                 })}
             </div>

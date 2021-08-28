@@ -14,7 +14,16 @@
     padding: 2rem;
     width: 100%;
 }
-
+.logoutButton{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+    border: 1px solid white;
+    padding: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
 .nameUserTitle{
     font-size: xx-large;
     color: ghostwhite;

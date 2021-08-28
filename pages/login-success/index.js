@@ -2,6 +2,7 @@ import homeStyles from "../../styles/Home.module.css";
 import Head from "next/head";
 import { CompanyLogo, Footer } from "..";
 import styles from "../../styles/LoginSuccess.module.css";
+import { useRouter } from "next/router";
 
 const RawStepData = [
   {
@@ -22,6 +23,7 @@ const RawStepData = [
   },
 ];
 const LoginSuccess = () => {
+    const router = useRouter();
   return (
     <>
       <div className={homeStyles.container}>
@@ -34,6 +36,7 @@ const LoginSuccess = () => {
         </Head>
         <main className={styles.pageContent}>
             <CompanyLogo/>
+            <div onClick={() => router.push("/")} className={styles.logoutButton}>Logout</div>
           <div className={styles.nameUserTitle}>
             Hi, <span className={styles.gradeintSpan}>Shahid Dhariwala</span>{" "}
             Welcome Back {"😎"}

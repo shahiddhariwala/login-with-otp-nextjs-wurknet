@@ -40,7 +40,7 @@ const LoginCard = (props) => {
   const [mobileNumber, setMobileNumber] = useState("");
   const [showLoader, setShowLoader] = useState(false);
   const [showEnterOtpScreen, setShowEnterOtpScreen] = useState(false);
-  const [otpInput,setOtpInput] = useState("");
+  const [otpInput,setOtpInput] = useState("####");
 
   const onClickSendOtpHandler = () => {
     // Impression of API Call
@@ -81,6 +81,11 @@ const LoginCard = (props) => {
     return otp && otp.includes("1111");
   }
 
+  const resetNumberHandler = () =>{
+    setShowEnterOtpScreen(false);
+    setMobileNumber("");
+  }
+
   const isValidNumber = (number) => {
     try{
       if(typeof number === "string")
@@ -94,6 +99,7 @@ const LoginCard = (props) => {
 
     return false;
   };
+
   return (
     <>
       <div className={styles.card}>
@@ -119,11 +125,11 @@ const LoginCard = (props) => {
           </div>
         </RenderIf>
         <RenderIf condition={showEnterOtpScreen}>
-            <OtpInput setOtpHandler={setOtpInput}/>
+            <OtpInput setOtpHandler={setOtpInput} otpInput={otpInput}/>
             <MyButton isValid={otpInput.length === 4} onClickHandler={verifyOtp} showLoader={showLoader} buttonText="Verify OTP"/>
             <div className={styles.afterEnterNumberOptions}>
                 <div onClick={resendOtpHandler}>Resend OTP</div>
-                <div onClick={()=> setShowEnterOtpScreen(false)}>Reset Number</div>
+                <div onClick={resetNumberHandler}>Reset Number</div>
             </div>
         </RenderIf>
       </div>
