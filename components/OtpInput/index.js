@@ -23,7 +23,7 @@ const OtpInput = ({setOtpHandler}) =>{
             <div className={styles.otpContainer}>
                 {localOtpState.map((val,index) => {
                     return (
-                        <input key={`otpInput${index}`} maxLength={1} data-index-number={index} onChange={(event) => otpChangeHandler(event)} autocomplete="off"/>
+                        <input key={`otpInput${index}`} maxLength={1} data-index-number={index} onChange={(event) => otpChangeHandler(event)} autoComplete="off"/>
                     )
                 })}
             </div>
