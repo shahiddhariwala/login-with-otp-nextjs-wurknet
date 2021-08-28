@@ -80,6 +80,8 @@
   border: none;
   margin-top: 0.5rem;
   height: 2rem;
+  color: grey;
+  padding-left: 1rem;
 }
 
 .loginWithPassword {

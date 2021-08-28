@@ -82,7 +82,10 @@ const LoginCard = (props) => {
   }
 
   const isValidNumber = (number) => {
-    return isValidPhoneNumber(typeof number === "string" && number);
+    if(typeof number === "string")
+    return isValidPhoneNumber(number);
+
+    return false;
   };
   return (
     <>

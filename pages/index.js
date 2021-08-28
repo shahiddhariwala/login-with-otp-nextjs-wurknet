@@ -45,7 +45,7 @@ export const Footer = () =>{
       target="_blank"
       rel="noopener noreferrer"
     >
-      Powered by{' '}
+      Powered by
       <span className={styles.logo}>
         WurkNet Private Limited
       </span>

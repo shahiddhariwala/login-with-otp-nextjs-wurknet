@@ -21,10 +21,11 @@ const OtpInput = ({setOtpHandler}) =>{
     return (
         <>
             <div className={styles.otpContainer}>
-                <input maxLength={1} data-index-number={0} onChange={(event) => otpChangeHandler(event)} />
-                <input maxLength={1} data-index-number={1} onChange={(event) => otpChangeHandler(event)} />
-                <input maxLength={1} data-index-number={2} onChange={(event) => otpChangeHandler(event)} />
-                <input maxLength={1} data-index-number={3} onChange={(event) => otpChangeHandler(event)} />
+                {localOtpState.map((val,index) => {
+                    return (
+                        <input key={`otpInput${index}`} maxLength={1} data-index-number={index} onChange={(event) => otpChangeHandler(event)} autocomplete="off"/>
+                    )
+                })}
             </div>
         </>
     )
