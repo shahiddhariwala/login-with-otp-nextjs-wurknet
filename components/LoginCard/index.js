@@ -82,8 +82,15 @@ const LoginCard = (props) => {
   }
 
   const isValidNumber = (number) => {
-    if(typeof number === "string")
-    return isValidPhoneNumber(number);
+    try{
+      if(typeof number === "string")
+      return isValidPhoneNumber(number);
+    }
+    catch(error)
+    {
+      console.log("Graceful catch",error)
+    }
+    
 
     return false;
   };
