@@ -28,9 +28,11 @@ export default function Home() {
 
 export const CompanyLogo = () => {
   return (
-    <div className={styles.companyLogo}>
+    <a className={styles.companyLogo}  href="https://www.worknetwork.ai/"
+    target="_blank"
+    rel="noopener noreferrer">
     WorkNetwork
-  </div>
+  </a>
   )
 }
 

@@ -33,6 +33,7 @@
 @media only screen and (max-width:600px) {
     .stepsContainer{
         flex-direction: column;
+        padding-bottom: 5rem;
     }
     .stepsCard{
         width: 90% !important;

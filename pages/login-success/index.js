@@ -45,7 +45,7 @@ const LoginSuccess = () => {
           <div className={styles.stepsContainer}>
             {RawStepData.map((data, index) => {
               return (
-                <div className={styles.stepsCard}>
+                <div className={styles.stepsCard} key={`steps${index}`}>
                   <p className={styles.stepTitle}>{`${index+1}. `}{data.title}</p>
                   <p className={styles.stepSubTitle}>{data.subtitle}</p>
                   <p>{data.desc}</p>
