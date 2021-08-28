@@ -1,0 +1,73 @@
+
+.gradeintSpan{
+    background-image: url("https://uploads-ssl.webflow.com/60b9f7d341683851e0d8608b/60b9f7d34168384472d860d5_Gradient%20Blur%20001.jpg");
+      background-position: 50% 50%;
+      background-size: 120%;
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+.pageContent{
+    height: 100%;
+    padding: 2rem;
+    width: 100%;
+}
+
+.nameUserTitle{
+    font-size: xx-large;
+    color: ghostwhite;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.stepsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width:600px) {
+    .stepsContainer{
+        flex-direction: column;
+    }
+    .stepsCard{
+        width: 90% !important;
+        background-color: red;
+    }
+    
+}
+
+.stepsCard{
+    margin: 1rem;
+    padding: 1.5rem;
+    color: grey;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #1d202c;
+    box-shadow: 2px 8px 8px -7px rgb(48, 59, 63);
+    transition: color 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+.stepTitle{
+    font-size: x-large;
+    color: white;
+}
+
+.stepSubTitle{
+    color: white;
+}
+
+.introHeading{
+    color: #8a94a6;
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}

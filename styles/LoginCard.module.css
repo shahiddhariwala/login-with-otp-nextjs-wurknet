@@ -1,0 +1,104 @@
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  color: grey;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #1d202c;
+  box-shadow: 2px 8px 8px -7px rgb(95, 118, 126);
+  transition: color 0.15s ease, box-shadow 0.15s ease;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card:hover,
+.card:focus,
+.card:active {
+  box-shadow: 1px 8px 8px -4px rgb(86, 98, 102);
+}
+
+.card > * {
+  margin: 0.5rem;
+}
+.loginTitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+
+
+.sendOtpButton {
+  background-color: #12141d;
+  color: inherit;
+  border-radius: inherit;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 8px -7px rgb(95, 118, 126);
+  height: 3rem;
+}
+
+.sendOtpButtonValid {
+  background-color: #12141d;
+  color: inherit;
+  border-radius: inherit;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px -1px 22px -1px rgb(143, 245, 139);
+  animation: blinker 1s linear infinite;
+  height: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+      width: 90%;
+    }
+  }
+
+@keyframes blinker {
+    50% {
+        box-shadow: 0px -1px 22px 2px rgb(214, 240, 213);
+    }
+}
+
+.enterMobileText {
+  font-size: 1rem;
+}
+.mobileNumberInputField {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobileNumberInputField > input {
+  background-color: #484a53e8;
+  border-radius: 5px;
+  width: 80%;
+  border: none;
+  margin-top: 0.5rem;
+  height: 2rem;
+}
+
+.loginWithPassword {
+  font-size: 0.8rem;
+}
+
+.loginWithPassword > span {
+  text-decoration: underline;
+}
+
+.afterEnterNumberOptions{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  font-weight: lighter;
+  text-decoration: underline;
+}
+
+.afterEnterNumberOptions div{
+  cursor: pointer;
+}

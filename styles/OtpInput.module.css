@@ -1,0 +1,19 @@
+
+
+.otpContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otpContainer > input{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    text-align:center;
+    margin: 0.5rem;
+    background-color: #484a53e8;
+    color: whitesmoke;
+    font-weight: bolder;
+}

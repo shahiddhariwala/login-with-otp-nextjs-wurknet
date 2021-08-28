@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #12141d;
 }
 
 .main {
@@ -13,17 +14,22 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  width: 100%;
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
   border-top: 1px solid #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: hsla(0, 0%, 100%, 0.45);
+  background-color: black;
 }
 
 .footer a {
@@ -31,6 +37,21 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+.introHeading {
+  width: 100%;
+  color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introText{
+  width: 40%;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
 }
 
 .title a {
@@ -78,44 +99,28 @@
   margin-top: 3rem;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
-}
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+.companyLogo {
+ font-size: xx-large;
+ font-weight: bolder;
+ color: white;
+ position: fixed;
+ top: 0px;
+ left: 0px;
+ width: 100%;
+ padding: 10px;
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
 }
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .introText{
+    width:100%;
+  }
+  .companyLogo{
+    background-color: #1d202c;
   }
 }
